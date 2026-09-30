@@ -1,0 +1,29 @@
+# Never commit personal career data. If you fork this repo, keep your career folder OUTSIDE it.
+profile/
+sources/
+evidence/
+sessions/
+offers/
+tracker*.csv
+master*.yaml
+skills_matrix.yaml
+reflection.md
+progress.yaml
+trace.md
+interview.md
+*.print.html
+/*.pdf
+/*.doc
+/*.docx
+/*.zip
+/*.csv
+
+# Example masters shipped with the plugin must stay tracked
+!plugins/**/examples/*.yaml
+
+# Build artifacts, lock and system files
+*.plugin
+~$*
+.~lock.*#
+.DS_Store
+__pycache__/

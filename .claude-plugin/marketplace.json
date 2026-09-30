@@ -1,0 +1,19 @@
+{
+  "name": "career-master",
+  "owner": {
+    "name": "Luis González Alonso",
+    "url": "https://github.com/lgonzalezalo"
+  },
+  "metadata": {
+    "description": "career-master: career review and honest job-search toolkit for Claude.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "career-master",
+      "source": "./plugins/career-master",
+      "description": "Career review and job-search toolkit: verified master profile, skills matrix, STAR stories and honest tailored applications.",
+      "version": "0.1.0"
+    }
+  ]
+}

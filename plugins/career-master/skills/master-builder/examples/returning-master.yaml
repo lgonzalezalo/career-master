@@ -1,0 +1,157 @@
+# FICTIONAL EXAMPLE — persona: returning. All people, organisations, links and figures are invented.
+# Shortened: a real master has more entries.
+meta: {version: "1.4", persona: returning, languages: [es], grammatical_gender: f, updated: "2026-10-01"}
+
+personal:
+  name: "Carmen Ortega"
+  location: "Gijón, España"
+  contact: {email: "carmen@example.com", linkedin: "https://example.com/carmen-linkedin"}
+
+constraints:
+  modality: hybrid
+  relocation: false
+  contract: permanent
+  salary_band: "32-38K EUR brutos"
+  availability: "1 mes"
+  target_roles: ["Coordinadora de operaciones", "Responsable de administración"]
+  avoid: ["turnos rotativos"]
+
+headlines:
+  - {id: hl-01, status: confirmed, text: "Coordinadora de operaciones y administración · 12 años en logística · ERP y mejora de procesos", refs: [ventisca-coord-01, ventisca-coord-02, ventisca-admin-01, ventisca-admin-02], source: "entrevista 2026-09-17"}
+
+profile_variants:
+  - id: pv-ops
+    status: confirmed
+    target: operations
+    text: >-
+      He coordinado durante siete años la operativa diaria de una empresa de transporte regional:
+      la planificación de rutas y un equipo de administración y tráfico, y participé en la
+      implantación del ERP como usuaria clave y formadora. Me he actualizado en Excel avanzado y
+      Power BI, y busco volver a un puesto de coordinación donde ordenar procesos y equipos.
+    refs: [ventisca-coord-01, ventisca-coord-02, ventisca-coord-03, tr-01]
+    source: "entrevista 2026-09-17"
+
+timeline:
+  - {id: t-01, status: confirmed, type: education, org: "Escuela de Negocios del Norte (ficticia)", title: "Diplomatura en Empresariales", start: "1998", end: "2001"}
+  - {id: t-02, status: confirmed, type: job, org: "Transportes Ventisca (ficticia)", title: "Administrativa", start: "2002-01", end: "2006-12"}
+  - {id: t-03, status: confirmed, type: job, org: "Transportes Ventisca (ficticia)", title: "Coordinadora de operaciones", start: "2007-01", end: "2014-05"}
+  - {id: t-04, status: confirmed, type: break, start: "2014-06", end: "2025-09", note: "", disclose: neutral}
+  - {id: t-05, status: confirmed, type: training, org: "Formación online", title: "Excel avanzado y Power BI", start: "2025-10", end: "2026-03"}
+
+experience:
+  - id: ventisca-coord
+    status: confirmed
+    timeline_ref: t-03
+    org: "Transportes Ventisca (ficticia)"
+    title: "Coordinadora de operaciones"
+    start: "2007-01"
+    end: "2014-05"
+    context: "Empresa de transporte regional, ~60 conductores y 3 almacenes"
+    team: {size: 5, reports: direct}
+    achievements:
+      - id: ventisca-coord-01
+        status: confirmed
+        text: "Coordiné la planificación diaria de rutas de unos 60 conductores y reduje las entregas fuera de plazo."
+        metrics: ["entregas fuera de plazo: de ~12% a ~5% en dos años (aprox.)"]
+        skills: [route-planning, operations, kpi-tracking]
+        verb_level: coordinated
+        usage_rule: "Cifras aproximadas recordadas por mí; decir 'aproximadamente'. Sin documento."
+        source: "entrevista 2026-09-15"
+      - id: ventisca-coord-02
+        status: confirmed
+        text: "Participé en la implantación del ERP Navision y formé a los 5 administrativos del departamento."
+        metrics: ["5 personas formadas"]
+        skills: [erp, navision, training, change-management]
+        verb_level: contributed
+        usage_rule: "El proyecto lo dirigía el proveedor; yo fui usuaria clave y formadora interna."
+        source: "sources/CV_2013.doc + entrevista 2026-09-15"
+      - id: ventisca-coord-03
+        status: confirmed
+        text: "Dirigí un equipo de 5 personas de administración y tráfico."
+        metrics: ["5 personas a mi cargo"]
+        skills: [people-leadership]
+        verb_level: led
+        usage_rule: "5 era el tamaño habitual del equipo."
+        source: "entrevista 2026-09-15"
+      - id: ventisca-coord-04
+        status: confirmed
+        text: >-
+          En la campaña de Navidad de 2011, con el doble de volumen y falta de conductores,
+          reorganicé las rutas por zonas, negocié con dos autónomos de refuerzo y adelanté la carga
+          al turno de noche; cerramos la campaña sin reclamaciones graves de los clientes
+          principales.
+        metrics: []
+        skills: [planning, operations, negotiation]
+        verb_level: led
+        usage_rule: "Resultado cualitativo: sin reclamaciones graves de los clientes principales; no hay cifra."
+        source: "entrevista 2026-09-16"
+  - id: ventisca-admin
+    status: confirmed
+    timeline_ref: t-02
+    org: "Transportes Ventisca (ficticia)"
+    title: "Administrativa"
+    start: "2002-01"
+    end: "2006-12"
+    context: "Departamento de administración y facturación"
+    achievements:
+      - id: ventisca-admin-01
+        status: confirmed
+        text: "Llevé la facturación mensual de los clientes de transporte y la conciliación con los albaranes, sin retrasos en los cierres de mes."
+        metrics: []
+        skills: [invoicing, administration, excel]
+        verb_level: did
+        usage_rule: "Sin cifras recordadas; mantener cualitativo."
+        source: "entrevista 2026-09-15"
+      - id: ventisca-admin-02
+        status: confirmed
+        text: "Preparé una plantilla de Excel para cuadrar albaranes y facturas que el departamento siguió usando después."
+        metrics: []
+        skills: [excel, process-improvement]
+        verb_level: did
+        usage_rule: "Resultado cualitativo: el equipo la adoptó; sin cifras."
+        source: "entrevista 2026-09-16"
+      - id: ventisca-admin-03
+        status: confirmed
+        text: "Atendí las consultas de facturación de los clientes principales y resolví las incidencias con el equipo de tráfico."
+        metrics: []
+        skills: [customer-service, administration]
+        verb_level: did
+        usage_rule: "Sin cifras; describir como responsabilidad habitual."
+        source: "entrevista 2026-09-16"
+
+education:
+  - {id: edu-01, status: confirmed, timeline_ref: t-01, title: "Diplomatura en Empresariales", org: "Escuela de Negocios del Norte (ficticia)", year: "2001", source: "sources/CV_2013.doc"}
+
+training:
+  - {id: tr-01, status: confirmed, timeline_ref: t-05, name: "Excel avanzado y Power BI", provider: "formación online", year: "2026", evidence: "evidence/certificado_powerbi.pdf", source: "evidence/certificado_powerbi.pdf"}
+
+languages:
+  - {id: lang-en, status: confirmed, language: Inglés, level: B1, evidence: "autoevaluación; curso en marcha", source: "entrevista 2026-09-15"}
+
+stories:
+  - id: story-peak-season
+    status: confirmed
+    competencies: [pressure, problem-solving, initiative]
+    questions: ["Una vez que trabajaste bajo presión", "Una vez que tuviste que reorganizar el trabajo rápido"]
+    situation: "En la campaña de Navidad de 2011 el volumen se duplicó y faltaban conductores."
+    task: "Mantener las entregas a tiempo sin disparar las horas extra."
+    action: "Reorganicé las rutas por zonas, negocié con dos autónomos de refuerzo y adelanté la carga al turno de noche."
+    result: "Cerramos la campaña sin reclamaciones graves de los clientes principales (resultado cualitativo; sin cifra)."
+    lesson: null
+    refs: [ventisca-coord-04]
+    source: "entrevista 2026-09-16"
+
+reflection_ref: profile/reflection.md
+
+working_method:
+  - {id: wm-01, status: confirmed, source: "entrevista 2026-09-17", text: "Me gusta tener el día planificado y dejar margen para imprevistos; reviso los datos antes de decidir."}
+
+qa_bank:
+  - {id: qa-break, status: confirmed, question: "¿Qué has hecho estos años?", answer: "Hice una pausa profesional. En el último año me he formado en Excel avanzado y Power BI y tengo ganas de volver a coordinar operaciones.", refs: [t-04, tr-01], source: "entrevista 2026-09-17"}
+
+known_gaps:
+  - {id: gap-sap, status: confirmed, skill: "SAP", slug: sap, framing: "Experiencia sólida con Navision; los procesos son los mismos y aprendo rápido una herramienta nueva.", refs: [ventisca-coord-02], source: "entrevista 2026-09-16"}
+  - {id: gap-modern-bi, status: confirmed, skill: "Herramientas actuales de BI", slug: modern-bi, framing: "Formación reciente y certificada en Power BI.", refs: [tr-01], source: "entrevista 2026-09-16"}
+
+verification_log:
+  - {date: "2026-09-15", item: t-04, decision: "La usuaria prefiere no detallar la pausa; disclose: neutral."}

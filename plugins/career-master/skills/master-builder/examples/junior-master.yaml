@@ -1,0 +1,140 @@
+# FICTIONAL EXAMPLE — persona: junior. All people, organisations, links and figures are invented.
+# Shortened: a real master has more entries.
+meta: {version: "1.2", persona: junior, languages: [es, en], grammatical_gender: f, updated: "2026-10-01"}
+
+personal:
+  name: "Lucía Martín"
+  location: "Valladolid, España"
+  contact: {email: "lucia@example.com", linkedin: "https://example.com/lucia-linkedin", github: "https://example.com/lucia-code"}
+
+constraints:
+  modality: flexible
+  relocation: true
+  contract: any
+  salary_band: "22-26K EUR brutos"
+  availability: "inmediata"
+  target_roles: ["Junior Data Analyst", "Business Analyst trainee"]
+  avoid: ["prácticas no remuneradas"]
+
+headlines:
+  - {id: hl-01, status: confirmed, text: "Analista de datos junior · SQL, Python y Power BI · Grado en ADE", refs: [edu-01, quelbe-01, prj-01, tr-01], source: "entrevista 2026-09-22"}
+
+profile_variants:
+  - id: pv-data
+    status: confirmed
+    target: data-analyst
+    text: >-
+      Recién graduada en ADE. En mis prácticas en una distribuidora automaticé el informe semanal
+      de ventas y en mi TFG analicé 3 años de datos de un comercio local para proponer cambios de
+      surtido. Me gusta explicar los datos a personas no técnicas.
+    refs: [edu-01, quelbe-01, prj-01, wm-02]
+    source: "entrevista 2026-09-22"
+
+timeline:
+  - {id: t-01, status: confirmed, type: education, org: "Universidad del Duero (ficticia)", title: "Grado en ADE", start: "2022", end: "2026"}
+  - {id: t-02, status: confirmed, type: job, org: "Distribuciones Quelbe (ficticia)", title: "Prácticas — Controlling", start: "2026-02", end: "2026-06"}
+  - {id: t-03, status: confirmed, type: job, org: "Autoservicio Brelia (ficticio)", title: "Cajera (fines de semana)", start: "2023-09", end: "2025-06"}
+  - {id: t-04, status: confirmed, type: volunteer, org: "Banco de alimentos local", title: "Voluntaria — logística", start: "2024", end: "2026"}
+
+experience:
+  - id: quelbe
+    status: confirmed
+    timeline_ref: t-02
+    org: "Distribuciones Quelbe (ficticia)"
+    title: "Prácticas — Controlling"
+    start: "2026-02"
+    end: "2026-06"
+    context: "Distribuidora regional de alimentación, 120 empleados"
+    achievements:
+      - id: quelbe-01
+        status: confirmed
+        text: "Automaticé el informe semanal de ventas con Power Query y Power BI, que antes se preparaba a mano en Excel."
+        metrics: ["~4 horas semanales ahorradas al equipo de controlling"]
+        skills: [power-bi, power-query, excel, reporting]
+        verb_level: did
+        usage_rule: "Figura aproximada dada por mi tutora; decir 'unas 4 horas'."
+        source: "entrevista 2026-09-20 + evidence/informe_practicas.pdf"
+      - id: quelbe-02
+        status: verify
+        text: "Detecté duplicados en el maestro de clientes y propuse una regla de limpieza."
+        metrics: []
+        skills: [data-quality, sql]
+        verb_level: contributed
+        usage_rule: "Pendiente: confirmar si la regla se llegó a aplicar."
+        source: "entrevista 2026-09-20"
+  - id: brelia
+    status: confirmed
+    timeline_ref: t-03
+    org: "Autoservicio Brelia (ficticio)"
+    title: "Cajera (fines de semana)"
+    start: "2023-09"
+    end: "2025-06"
+    context: "Trabajo a tiempo parcial compatible con los estudios"
+    achievements:
+      - id: brelia-01
+        status: confirmed
+        text: "Compaginé 15 horas semanales de trabajo con el grado durante dos cursos, y me asignaron la formación de nuevas incorporaciones en caja."
+        metrics: ["15 h/semana", "2 cursos"]
+        skills: [customer-service, reliability, training]
+        verb_level: did
+        usage_rule: "Usar como evidencia de responsabilidad y organización, no como experiencia en datos."
+        source: "entrevista 2026-09-20"
+
+education:
+  - id: edu-01
+    status: confirmed
+    timeline_ref: t-01
+    title: "Grado en Administración y Dirección de Empresas"
+    org: "Universidad del Duero (ficticia)"
+    year: "2026"
+    notes: "TFG: análisis de ventas de un comercio local (Python, pandas) con propuesta de surtido; nota 9."
+    source: "sources/CV_2026.pdf"
+
+projects:
+  - {id: prj-01, status: confirmed, name: "TFG — análisis de surtido", role: "autora", text: "Analicé 3 años de tickets de un comercio local con Python y propuse eliminar 40 referencias de baja rotación.", link: "https://example.com/lucia-code/tfg", skills: [python, pandas, analysis], source: "entrevista 2026-09-21"}
+  - id: prj-02
+    status: confirmed
+    name: "Trabajo de grupo — plan de marketing (3.º curso)"
+    role: "coordinadora informal"
+    text: >-
+      Cuando dos de los cuatro miembros dejaron de entregar a tres semanas del plazo, propuse una
+      reunión, repartimos las tareas por disponibilidad real y creé un tablero compartido con
+      fechas intermedias. Entregamos a tiempo con un 8,5 y el profesor usó el tablero como ejemplo
+      en clase.
+    skills: [teamwork, planning]
+    source: "entrevista 2026-09-21"
+
+training:
+  - {id: tr-01, status: confirmed, name: "SQL for Data Analysis", provider: "curso online", year: "2025", evidence: "evidence/certificado_sql.pdf", source: "evidence/certificado_sql.pdf"}
+
+languages:
+  - {id: lang-en, status: confirmed, language: Inglés, level: B2, evidence: "Cambridge First 2023", source: "sources/CV_2026.pdf"}
+
+stories:
+  - id: story-group-conflict
+    status: confirmed
+    competencies: [teamwork, conflict]
+    questions: ["Háblame de un conflicto en un equipo", "Una vez que un compañero no cumplió"]
+    situation: "En un trabajo de grupo de 4 personas, dos compañeros dejaron de entregar su parte a tres semanas de la entrega."
+    task: "Evitar suspender y no cargar todo el trabajo sobre dos personas."
+    action: "Propuse una reunión corta, repartimos de nuevo las tareas por disponibilidad real y creé un tablero compartido con fechas intermedias."
+    result: "Entregamos a tiempo con un 8,5; el profesor usó nuestro tablero como ejemplo en clase."
+    lesson: null
+    refs: [prj-02]
+    source: "entrevista 2026-09-21"
+
+reflection_ref: profile/reflection.md
+
+working_method:
+  - {id: wm-02, status: confirmed, source: "entrevista 2026-09-22", text: "Me gusta explicar los datos a personas no técnicas; en las prácticas presentaba el informe semanal al equipo comercial."}
+  - {id: wm-01, status: confirmed, source: "entrevista 2026-09-22", text: "Me organizo mejor con objetivos claros y revisiones cortas; pregunto pronto cuando algo no me cuadra."}
+
+qa_bank:
+  - {id: qa-why-data, status: confirmed, question: "¿Por qué análisis de datos?", answer: "En las prácticas vi que un informe bien hecho ayudaba al equipo comercial, y es lo que más disfruté del grado.", refs: [quelbe-01, wm-02], source: "entrevista 2026-09-22"}
+
+known_gaps:
+  - {id: gap-looker, status: confirmed, skill: "Looker", slug: looker, framing: "No lo he usado; trabajo con Power BI, que cubre los mismos conceptos de modelo y medidas.", refs: [quelbe-01], source: "entrevista 2026-09-22"}
+  - {id: gap-fulltime-data-experience, status: confirmed, skill: "Experiencia laboral en datos a jornada completa", slug: fulltime-data-experience, framing: "Prácticas de 5 meses y un TFG con datos reales; he completado un curso de SQL por mi cuenta.", refs: [quelbe-01, prj-01, tr-01], source: "entrevista 2026-09-21"}
+
+verification_log:
+  - {date: "2026-09-20", item: quelbe-01, decision: "El CV antiguo decía 'automaticé todos los informes'; corregido a solo el semanal."}

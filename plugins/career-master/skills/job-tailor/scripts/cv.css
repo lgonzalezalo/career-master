@@ -1,0 +1,13 @@
+@page { size: A4; margin: 14mm 16mm; }
+body { font-family: 'Carlito', 'Calibri', 'Liberation Sans', Arial, sans-serif; font-size: 10.3pt; line-height: 1.32; color: #1d232b; margin: 0; }
+h1 { font-size: 21pt; margin: 0 0 2px; color: #0f2a44; }
+.headline { font-size: 11.5pt; color: #1f5a8a; font-weight: 700; margin: 0 0 3px; }
+.contact { font-size: 9.3pt; color: #4a5561; margin: 0 0 8px; }
+h2 { font-size: 11pt; text-transform: uppercase; letter-spacing: 1.2px; color: #0f2a44; border-bottom: 1.2px solid #1f5a8a; padding-bottom: 2px; margin: 11px 0 5px; break-after: avoid; }
+h3 { font-size: 10.6pt; margin: 8px 0 1px; color: #0f2a44; display: flex; justify-content: space-between; break-after: avoid; }
+.date { font-weight: 400; color: #4a5561; font-size: 9.6pt; white-space: nowrap; }
+li .date { float: right; }
+.context { font-style: italic; color: #4a5561; margin: 1px 0 3px; font-size: 9.8pt; }
+ul { margin: 2px 0 4px; padding-left: 15px; }
+li { margin: 0 0 2.5px; }
+p { margin: 0 0 4px; }
