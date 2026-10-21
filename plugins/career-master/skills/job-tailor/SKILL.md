@@ -75,7 +75,8 @@ Completeness (0–100; each component pro rata; total rounded to an integer). Re
    Never add a reason the user did not mark for disclosure, in any document or answer. A career
    break never lowers the fit score.
 9. Never include photo, age, date of birth, nationality or marital status, even if an old CV had
-   them.
+   them. Never state total years of experience ("20+ years", "más de 20 años") in headlines,
+   profile, letters or answers unless the offer explicitly asks; describe scope and results instead.
 10. Form questions about right to work, nationality, age, health or disability, pregnancy,
     gender or gender identity, sexual orientation, ethnicity, religion, political or union
     affiliation, criminal record, family or salary history: do not answer or store them. Write
@@ -92,12 +93,15 @@ Completeness (0–100; each component pro rata; total rounded to an integer). Re
    numbers and profile links; keep company, role, requirements, conditions and the public
    application URL.
 2. **Analyse**: company, role, role family, seniority, must-haves, nice-to-haves, tools, domain,
-   language, modality, salary, location, form questions.
+   language, modality, salary, location, form questions, and the level-fit signals
+   (`references/scoring.md`, "Level fit").
 3. **Score 0–100** with `references/scoring.md` and save `score.md` in the layout defined there.
    Add the tracker row now (`decision: pending`, `status: draft`), following
    `references/tracker.md`.
 4. **Gate**: <55 red (recommend skipping), 55–70 amber (user decides), >70 green. Conditions in
-   `constraints` are soft: mismatches lower the score and are flagged, never auto-reject. Ask
+   `constraints` are soft: mismatches lower the score and are flagged, never auto-reject. Show
+   the level-fit verdict beside the colour; it never changes the score or rejects. If it is not
+   "aligned", ask once whether to apply in level-fit mode. Ask
    whether to continue; if the user skips, set `decision: skip`, `status: skipped`,
    `skip_reason`.
 5. **Select**: headline, profile variant and 3–8 achievements per recent role (as defined in
@@ -109,7 +113,8 @@ Completeness (0–100; each component pro rata; total rounded to an integer). Re
    `profile/master.<lang>.yaml`. Show the selection for validation before writing.
 6. **Generate** (only what the user asks for):
    - CV: section order and page count per persona in `references/cv-template.md`, unless the
-     user prefers otherwise; single column, ATS-friendly.
+     user prefers otherwise; single column, ATS-friendly. In level-fit mode, also follow the
+     "Level-fit mode" section of that file.
    - Cover letter: 250–300 words; a hook about the company using only facts from the offer or
      pages actually read (otherwise keep it generic), 1–2 stories that match must-haves, close.
    - Answers: based on `stories`, `qa_bank` and `working_method`; respect character limits;

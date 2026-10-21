@@ -89,7 +89,9 @@ If `profile/master.yaml` does not exist in the folder, run the career-start onbo
 5. **verify** — For each claim: status, metrics, skills (slugs), `verb_level`, `usage_rule`,
    evidence. Move doubtful items to `verify` with a note of what would confirm them. Draft 1–2
    headlines and a profile variant per target role from confirmed claims only (with `refs`), and
-   confirm them with the user. Flag any entry that would reveal a protected trait (data rules).
+   confirm them with the user. Headlines and profiles never state total years of experience
+   ("20+ years", "más de 20 años"): describe scope and results instead (age-neutral). Flag any
+   entry that would reveal a protected trait (data rules).
 6. **reflection** — Guided questions (playbook section "Reflection") on energy, pride, values,
    what to avoid, working style and direction. Write `profile/reflection.md` in the user's words,
    plus 3–5 "What I am looking for" statements they approve, applying the data rules' exception

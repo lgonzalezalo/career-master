@@ -54,10 +54,31 @@ Age and personal data
   recorded) are always shown in full; older ones go under
   "Earlier experience".
 - Never add photo, age, date of birth, nationality or marital status, even if an old CV had them.
+- Never state total years of experience ("20+ years", "más de 20 años") in the headline,
+  profile, cover letter or answers, unless the offer asks for it explicitly; describe scope and
+  results instead. Durations of a single role or project are fine.
 - Spanish documents use `meta.grammatical_gender` for titles and adjectives (Licenciada /
   Licenciado); if it is not set, ask.
 - Dates: "Mon YYYY" in the document language ("ene. 2020" / "Jan 2020"); `end: null` →
   "Actualidad" / "Present".
+
+## Level-fit mode
+
+Only after the user chooses it for an offer whose level-fit verdict is "one level below" or
+"overqualified". It changes selection and emphasis, never facts: nothing is invented and nothing
+is deleted from the master.
+
+- Headline: the confirmed headline closest to the offer's role family and level; never a title
+  the user did not hold.
+- Achievements: put hands-on delivery and result items first. Reduce scope metrics (team size,
+  P&L, budget, organisation size) to one credibility line in the most relevant recent role.
+- Keep every must-have of the offer evidenced, with its keywords, so ATS filters still match.
+- Experience: real titles and dates; never hide an employer or create a gap.
+- Profile: lead with what the role asks. A one-line reason for choosing this role is allowed
+  only from "What I am looking for" statements the user has approved; otherwise ask.
+- Offer, in one line, a 2–3 line motivation note for the recruiter message or a form field. Do
+  not write a cover letter unless the user asks for one.
+- Record in `trace.md` which scope items were reduced and why.
 
 ## Style checks
 - Every bullet traceable to a confirmed master id.

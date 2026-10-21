@@ -17,7 +17,7 @@ constraints:
   avoid: ["turnos rotativos"]
 
 headlines:
-  - {id: hl-01, status: confirmed, text: "Coordinadora de operaciones y administración · 12 años en logística · ERP y mejora de procesos", refs: [ventisca-coord-01, ventisca-coord-02, ventisca-admin-01, ventisca-admin-02], source: "entrevista 2026-09-17"}
+  - {id: hl-01, status: confirmed, text: "Coordinadora de operaciones y administración · Logística y transporte · ERP y mejora de procesos", refs: [ventisca-coord-01, ventisca-coord-02, ventisca-admin-01, ventisca-admin-02], source: "entrevista 2026-09-17"}
 
 profile_variants:
   - id: pv-ops

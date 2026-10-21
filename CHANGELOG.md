@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.2 — 2026-10-21 (pilot)
+- Level fit: `score.md` reports whether the role is aligned, one level below or overqualified
+  (five neutral signals, never changes the score, never auto-rejects).
+- Level-fit mode in `cv-template.md`: selection and emphasis only, nothing invented or deleted.
+
+## 0.1.1 — 2026-10-02 (pilot)
+- Age-neutral wording: headlines, profiles, cover letters and answers never state total years of
+  experience ("20+ years", "más de 20 años") unless the offer explicitly asks; scope and results
+  instead (cv-template, job-tailor rule 9, master-builder verify phase).
+- Returning example headline no longer states years in the sector.
+- `tools/check.py` flags total years of experience in example headlines and profile variants.
+
 ## 0.1.0 — 2026-09-30 (pilot)
 - First public version.
 - Skills: career-start, master-builder, skills-matrix, star-coach, job-tailor.

@@ -260,6 +260,12 @@ def check_master(path: pathlib.Path) -> dict:
             errs.append(f"{s['id']}: unknown competencies {bad}")
         if "failure" in s.get("competencies", []) and not s.get("lesson"):
             errs.append(f"{s['id']}: failure story without lesson")
+    years_re = re.compile(r"\b\d+\s*\+\s*(años|years)\b|\b\d+\s*(años|years)\s+(de experiencia|of experience|en|in)\b"
+                          r"|(más de|over|more than)\s+\d+\s+(años|years)", re.I)
+    for section in ("headlines", "profile_variants"):
+        for e in d.get(section, []) or []:
+            if live(e) and years_re.search(str(e.get("text", ""))):
+                errs.append(f"{e.get('id')}: states total years of experience (age-neutral rule)")
     for e in errs:
         fail(f"{path.name}: {e}")
     return {"ids": ids, "doc": d}
