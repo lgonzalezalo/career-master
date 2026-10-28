@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+- Step 7 now has two layers: `scripts/lint_cv.py` (mechanical checks: total years, personal data,
+  figures not in the master, PDF pages, plus personal rules from `cv_rules.lint` in the master)
+  and an independent read-only reviewer (`references/reviewer.md`).
+
 ## 0.1.2 — 2026-10-21 (pilot)
 - Level fit: `score.md` reports whether the role is aligned, one level below or overqualified
   (five neutral signals, never changes the score, never auto-rejects).

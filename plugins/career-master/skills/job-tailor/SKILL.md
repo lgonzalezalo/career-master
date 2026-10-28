@@ -125,6 +125,13 @@ Completeness (0–100; each component pro rata; total rounded to an integer). Re
    `personal.<field>`, `constraints.<field>` or `matrix:<slug>`; `trace.md` is never sent); no
    new figures; usage rules respected; no private data (rules 7–10) and no protected traits the
    user has not approved (data rules); page count; language.
+   - **7a. Mechanical checks.** Run `python3 "<this skill's folder>/scripts/lint_cv.py" --master
+     profile/master.yaml offers/<folder>/cv.md` (add `letter.md` and `answers.md` if they exist).
+     Fix every ERROR; fix each warning or justify it in `trace.md`.
+   - **7b. Independent review.** Launch a subagent with read-only tools and a fresh context, give
+     it only the file paths and the brief in `references/reviewer.md`. If subagents are not
+     available, run the same checklist yourself in a separate pass. Fix every BLOCKER once, re-run
+     7a and tell the user which advisories remain. Do not loop more than once.
 8. **Render and save** in the offer folder (`cv.md`, `cv.pdf`, `letter.md`, `answers.md`):
    `python3 "<this skill's folder>/scripts/render.py" "offers/<folder>/cv.md"
    "offers/<folder>/cv.pdf" --title "<Name> - CV"`. The script prints the page count; adjust
