@@ -4,6 +4,11 @@
 - Step 7 now has two layers: `scripts/lint_cv.py` (mechanical checks: total years, personal data,
   figures not in the master, PDF pages, plus personal rules from `cv_rules.lint` in the master)
   and an independent read-only reviewer (`references/reviewer.md`).
+- Form questions: for Easy Apply and similar forms, job-tailor asks for the questions before
+  analysing and flags knockout ones at the gate, before any document is generated.
+- Step 7c: `scripts/ats_check.py` checks the final PDF (extractable text, pages, fonts, images,
+  contact, sections, dates next to roles) and the coverage of the user-approved `keywords.txt`.
+  It is an approximation, not a real ATS, and never recommends keyword stuffing.
 
 ## 0.1.2 — 2026-10-21 (pilot)
 - Level fit: `score.md` reports whether the role is aligned, one level below or overqualified

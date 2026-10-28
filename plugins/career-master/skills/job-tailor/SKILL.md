@@ -91,19 +91,31 @@ Completeness (0–100; each component pro rata; total rounded to an integer). Re
    with hyphens, no accents or spaces, e.g. `2026-10-01-acme-logistica-coordinadora`; add `-2`,
    `-3` if it already exists). When saving `raw.md`, remove individuals' names, emails, phone
    numbers and profile links; keep company, role, requirements, conditions and the public
-   application URL.
+   application URL. If the application has a form (for example Easy Apply), ask the user for its
+   questions now and save them in `raw.md` under `## Form questions`; if they do not have them
+   yet, tell them to copy them from the first step of the form without sending anything, and
+   continue with the question marked as pending. Protected questions (rule 10) are not analysed
+   or answered: the user answers them in the form.
 2. **Analyse**: company, role, role family, seniority, must-haves, nice-to-haves, tools, domain,
-   language, modality, salary, location, form questions, and the level-fit signals
+   language, modality, salary, location, form questions (flag the knockout ones: years per tool or
+   domain, salary expectation, location or availability, certifications, language level), and the
+   level-fit signals
    (`references/scoring.md`, "Level fit").
 3. **Score 0–100** with `references/scoring.md` and save `score.md` in the layout defined there.
    Add the tracker row now (`decision: pending`, `status: draft`), following
-   `references/tracker.md`.
+   `references/tracker.md`. Also create `offers/<folder>/keywords.txt` with the must-have and
+   nice-to-have terms (synonyms separated by `|`, in the languages the offer uses; a leading `!`
+   marks a known gap that must not be added); the user approves it together with the score.
 4. **Gate**: <55 red (recommend skipping), 55–70 amber (user decides), >70 green. Conditions in
    `constraints` are soft: mismatches lower the score and are flagged, never auto-reject. Show
    the level-fit verdict beside the colour; it never changes the score or rejects. If it is not
    "aligned", ask once whether to apply in level-fit mode. Ask
    whether to continue; if the user skips, set `decision: skip`, `status: skipped`,
-   `skip_reason`.
+   `skip_reason`. **Knockout questions**: if a form question cannot be answered truthfully in the
+   user's favour (for example years of experience in a domain they lack), warn at the gate
+   before generating any document and let the user decide to skip or continue with the honest
+   answer; if the user has not provided the questions, say the risk is unassessed. When the user
+   skips because of one, record which one in `skip_reason`.
 5. **Select**: headline, profile variant and 3–8 achievements per recent role (as defined in
    the completeness formula; for `junior`, choose from all confirmed achievements, projects and
    education to fill one page), prioritising must-haves. If no confirmed headline or profile
@@ -132,6 +144,12 @@ Completeness (0–100; each component pro rata; total rounded to an integer). Re
      it only the file paths and the brief in `references/reviewer.md`. If subagents are not
      available, run the same checklist yourself in a separate pass. Fix every BLOCKER once, re-run
      7a and tell the user which advisories remain. Do not loop more than once.
+   - **7c. ATS check of the PDF** (after rendering, step 8). Run `python3 "<this skill's folder>/scripts/ats_check.py"
+     offers/<folder>/cv.pdf --keywords offers/<folder>/keywords.txt` and apply the ATS rules in
+     `references/reviewer.md`. Show the user the WARN and MISSING lines in a short table, separating
+     verified problems, potential risks and what cannot be verified. It is an approximation, never
+     say the CV "will pass" a filter. Add a MISSING term only if it is already evidenced in the
+     master; otherwise it stays a gap or "pending confirmation". Do not stuff or repeat keywords.
 8. **Render and save** in the offer folder (`cv.md`, `cv.pdf`, `letter.md`, `answers.md`):
    `python3 "<this skill's folder>/scripts/render.py" "offers/<folder>/cv.md"
    "offers/<folder>/cv.pdf" --title "<Name> - CV"`. The script prints the page count; adjust
@@ -139,7 +157,7 @@ Completeness (0–100; each component pro rata; total rounded to an integer). Re
    Exit code 2: no PDF engine — tell the user to open the `.print.html` it left, press Ctrl+P
    (Cmd+P on Mac), choose "Save as PDF", A4, default margins. Exit code 1: read the message
    (missing input, wrong output name, pandoc error), fix it and retry. Then set
-   `decision: apply` in the tracker (status stays `draft` until the user says it was sent).
+   `decision: apply` in the tracker (status stays `draft` until the user says it was sent). Run 7c on the PDF before the user sends it.
 
 ## Interview preparation
 

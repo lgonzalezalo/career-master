@@ -18,7 +18,8 @@ id,created_at,company,role,role_family,source,agency,url,language,modality,salar
 ## Lifecycle
 
 1. After scoring (job-tailor step 3): create the row with `decision: pending`, `status: draft`.
-2. User skips: `decision: skip`, `status: skipped`, `skip_reason`.
+2. User skips: `decision: skip`, `status: skipped`, `skip_reason` (if it was a knockout form
+   question, say which one).
 3. Documents generated: `decision: apply` (status stays `draft`).
 4. User says it was sent: `status: applied`, `applied_at` (ask the date if unclear).
 5. News on a `draft` row: first ask whether and when they applied.
