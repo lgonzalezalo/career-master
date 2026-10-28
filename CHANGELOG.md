@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.3 — 2026-10-28 (pilot)
 - Step 7 now has two layers: `scripts/lint_cv.py` (mechanical checks: total years, personal data,
   figures not in the master, PDF pages, plus personal rules from `cv_rules.lint` in the master)
   and an independent read-only reviewer (`references/reviewer.md`).

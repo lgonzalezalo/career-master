@@ -3,7 +3,7 @@
 **Revisa tu vida profesional, construye un master verificado y prepara candidaturas honestas.**
 *Review your career, build a verified master profile and prepare honest applications.*
 
-Plugin para Claude (Cowork y Claude Code) · v0.1.2 (piloto) · Español / English · MIT
+Plugin para Claude (Cowork y Claude Code) · v0.1.3 (piloto) · Español / English · MIT
 
 ---
 
