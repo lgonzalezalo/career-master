@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.4 — 2026-11-13 (pilot)
+- `lint_cv.py`: figures are compared by value ("27,5%" = "27.5%", "250.000 $" = "$250K"), and
+  currency written after the number is detected. A figure the master only names to prohibit
+  ("never 40%") is an error; if other ids allow it, it is a NOTE for the reviewer to check
+  against `trace.md`. Team sizes not in the master are warned. Total years of experience are
+  also caught in words ("twenty years", "quince años") and as "yrs". The generic old-year
+  warning is replaced by a personal rule whose id ends in `-year`, if the master defines one.
+- `ats_check.py`: keywords match whole words (plural allowed) and across line breaks; a known
+  gap (`!`) that appears in the PDF is now a WARN; dates with month names and "Present" are
+  recognised; a date range is no longer read as a phone number; clear message if the PDF or
+  poppler is missing.
+
 ## 0.1.3 — 2026-10-28 (pilot)
 - Step 7 now has two layers: `scripts/lint_cv.py` (mechanical checks: total years, personal data,
   figures not in the master, PDF pages, plus personal rules from `cv_rules.lint` in the master)
